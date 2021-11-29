@@ -11,7 +11,7 @@ Run `npm install playwright-core playwright-aws-lambda` to install
 project-specific dependencies on playwright (yes, I don't no either
 why this is so complicated.)
 
-## Deveopment server
+## Development server
 
 Run `yarn server` to start the development server for direct
 browser rendering (faster when designing and debugging). Doesn't
@@ -25,7 +25,7 @@ Requires that playwright is installed.
 Direct rendering in browser (run `yarn server`):
 `http://localhost:3000/?title=Blah`
 
-Generate PNG (run `ntl dev`, requires playwright):
+Generate PNG (run `ntl dev`, requires playwright installed):
 `http://localhost:8888/.netlify/functions/create-card/?title=Blah`
 
 ## Deployment

@@ -1,19 +1,33 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/280deb73-e156-48c2-9181-defea62630bb/deploy-status)](https://app.netlify.com/sites/social-card-image/deploys)
+## Setup
 
+Run `yarn` to install dependencies.
+Run `npm i -g netlify-cli` to install Netlify command line tools.
 
-## Social Card Image Creator
+Run `npm i -D playwright` for neccessary libraries
+for PNG generation. (This can take a long time as it
+downloads builds of various browser engines.)
 
-[Tutorial can be found here][tutorial]
+Run `npm install playwright-core playwright-aws-lambda` to install
+project-specific dependencies on playwright (yes, I don't no either
+why this is so complicated.)
 
-[![](https://www.netlify.com/img/deploy/button.svg)][deploy]
+## Deveopment server
 
-It will fail until you change the `imagepath` in the `functions/create-card.js` file or pass the imagepath in your query string parameter to your site's card location.
+Run `yarn server` to start the development server for direct
+browser rendering (faster when designing and debugging). Doesn't
+need playwright.
 
+Run `ntl dev` to start the development server for PNG generation.
+Requires that playwright is installed.
 
--------------
+### Example URLs
 
-This project was bootstrapped with [Create React App][create-react-app].
+Direct rendering in browser (run `yarn server`):
+`http://localhost:3000/?title=Blah`
 
-[deploy]: https://app.netlify.com/start/deploy?repository=https://github.com/talves/social-card-image
-[create-react-app]: https://github.com/facebook/create-react-app
-[tutorial]: https://tony.alves.dev/garden/netlify-react-social-card
+Generate PNG (run `ntl dev`, requires playwright):
+`http://localhost:8888/.netlify/functions/create-card/?title=Blah`
+
+## Deployment
+
+Pushing to Github will auto-deploy on Netlify.

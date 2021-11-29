@@ -2,9 +2,9 @@ const playwright = require("playwright-aws-lambda");
 
 const buildUri = ({ queryStringParameters = {} }) => {
   const {
-    cardpath = "https://stb-socialcards.netlify.app",
+    cardpath = "https://noko-socialcards.netlify.app",
     id = "social-card",
-    title = "Stacking the Bricks",
+    title = "Noko Time Tracking",
     width,
     height,
     author_avatar = "https://stackingthebricks.com/icon-256.png",

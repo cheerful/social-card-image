@@ -7,7 +7,7 @@ const buildUri = ({ queryStringParameters = {} }) => {
     title = "Noko Time Tracking",
     width,
     height,
-    author_avatar = "https://stackingthebricks.com/icon-256.png",
+    author_avatar = "https://nokotime.com/icon-256.png",
     author_name = ""
   } = queryStringParameters;
 
